@@ -211,12 +211,17 @@ span{
 
 .services-container .services-box:hover{
     border-color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
     transform: scale(1.02);
 }
 
 .services-box i{
     font-size: 7rem;
     color: var(--main-color);
+}
+
+.services-box:hover i{
+    text-shadow: 0 0 1rem var(--main-color);
 }
 
 .services-box h3{
