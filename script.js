@@ -58,3 +58,35 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+/*========== smtp email sender ==========*/
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var subjectInput = document.getElementById('subject');
+    var messageInput = document.getElementById('message');
+    
+    // Clear the input fields
+    nameInput.value = '';
+    emailInput.value = '';
+    subjectInput.value = '';
+    messageInput.value = '';
+
+    var name = nameInput.value;
+    var email = emailInput.value;
+    var subject = subjectInput.value;
+    var message = messageInput.value;
+    var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject: ' + subject + '<br/> message: ' + message;
+
+    Email.send({
+        SecureToken: "18f8c89d-dbbc-458d-8f41-289bddc24928",
+        To: 'nickoalbes@gmail.com',
+        From: "mobiemocken0978@gmail.com",
+        Subject: "Contact Message",
+        Body: body
+    }).then(
+        message => alert(message)
+    );
+});
