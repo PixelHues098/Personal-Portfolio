@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicko C. Albes</title>
+    <title>Nicko C. Albes | Portfolio</title>
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <!-- font awesome for tech icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,13 +16,14 @@
 <body>
     <!-- header design -->
     <header class="header">
-        <a href="" class="logo">Nicko A.</a>
+        <a href="#" class="logo">Nicko A.</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contacts">Contact</a>
@@ -31,36 +33,217 @@
     <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Nicko C. Albes</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Passionately driven by curiosity, crafting digital experiences, coding, exploring tech, and pushing web
-                boundaries.</p>
+            <h3 class="intro-text">Hello, I am</h3>
+            <h1 class="name-text">Nicko C. Albes</h1>
+            <h3 class="role-text">And I'm a <span class="multiple-text"></span></h3>
+            <p class="description">Passionately driven by curiosity, crafting digital experiences, coding, exploring tech, and pushing web boundaries.</p>
             <div class="social-media">
-                <a href="https://web.facebook.com/redhues669/"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.linkedin.com/in/nicko-albes-89b2b0264/"><i class='bx bxl-linkedin'></i></i></a>
-                <a href="https://www.instagram.com/nicko.hues/"><i class='bx bxl-instagram'></i></a>
-                <a href="https://github.com/PixelHues098"><i class='bx bxl-github'></i></a>
+                <a href="https://web.facebook.com/redhues669/" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.linkedin.com/in/nicko-albes-89b2b0264/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/nicko.hues/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/PixelHues098" aria-label="GitHub"><i class='bx bxl-github'></i></a>
             </div>
             <!-- Download resume-->
-            <a href="assets/Nicko Albes - Resume.pdf" download="Nicko Albes-Resume.pdf" class="btn">Download Resume</a>
+            <div class="cta-buttons">
+                <a href="assets/Nicko C. Albes - Resume.pdf Albes - Resume.pdf" download="Nicko C. Albes-Resume.pdf" class="btn">Download Resume</a>
+                <a href="#contacts" class="btn secondary-btn">Let's Connect</a>
+            </div>
         </div>
         <div class="home-img">
-            <img src="assets/home.jpg" alt="">
+            <img src="assets/home.jpg" alt="Nicko Albes">
         </div>
     </section>
 
     <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="assets/home.jpg" alt="">
+            <img src="assets/home.jpg" alt="Nicko Albes">
         </div>
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Software Developer | IT/CS Instructor</h3>
-            <p>Versatile and tech-savvy professional with experience in software development, computer skills, and teaching. Skilled in web and software development using C#, Java, JavaScript, and PHP. Has a good understanding of system design, databases, and modern tech tools. Also worked as a college instructor, showing strong communication and problemsolving skills. Ready to take on any role that needs technical knowledge, computer literacy, and a quick learner.
-</p>
+            <p>Versatile and tech-savvy professional with experience in software development, computer skills, and teaching. Skilled in web and software development using C#, Java, JavaScript, and PHP. Has a good understanding of system design, databases, and modern tech tools. Also worked as a college instructor, showing strong communication and problem-solving skills. Ready to take on any role that needs technical knowledge, computer literacy, and a quick learning ability.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <h4>5+</h4>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <h4>3+</h4>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat">
+                    <h4>100%</h4>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section design -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Tech <span>Skills</span></h2>
+        
+        <div class="skills-container">
+
+            <!-- Frontend -->
+            <div class="skill-category">
+                <h3><i class='bx bx-code-block'></i> Frontend</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="JavaScript">
+                        <i class="fab fa-js-square"></i>
+                        <span>JS</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Blazor C#">
+                        <i class="fas fa-code"></i>
+                        <span>Blazor C#</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Angular">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Bootstrap">
+                        <i class="fab fa-bootstrap"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Backend -->
+            <div class="skill-category">
+                <h3><i class='bx bx-server'></i> Backend</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="PHP">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Node.js">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Go">
+                        <i class="fa-brands fa-golang"></i>
+                        <span>Go</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="C#">
+                        <i class="fas fa-csharp"></i>
+                        <span>C#</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Databases -->
+            <div class="skill-category">
+                <h3><i class='bx bx-data'></i> Databases</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="MySQL">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="PostgreSQL">
+                        <i class="fas fa-database"></i>
+                        <span>Postgre SQL</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="MS SQL">
+                        <i class="fas fa-database"></i>
+                        <span>MS SQL</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Entity Framework">
+                        <i class="fas fa-layer-group"></i>
+                        <span>EF Core</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Programming Tools & Practices -->
+            <div class="skill-category">
+                <h3><i class='bx bx-cog'></i>Programming Tools & Practices</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="Git">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="GitLab">
+                        <i class="fab fa-gitlab"></i>
+                        <span>GitLab</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="REST API">
+                        <i class="fas fa-network-wired"></i>
+                        <span>REST API</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Agile/Scrum">
+                        <i class="fas fa-tasks"></i>
+                        <span>Scrum</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Jira">
+                        <i class="fab fa-jira"></i>
+                        <span>Jira</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virtual Assistance -->
+            <div class="skill-category">
+                <h3><i class='bx bx-cog'></i>Virtual Assistance</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="Gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Gmail</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Slack">
+                        <i class="fa-brands fa-slack"></i>
+                        <span>Slack</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Gmeet">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Gmeet</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Notion">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Notion</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Calendar">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Google Calendar</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="Office">
+                        <i class="fa-solid fa-paperclip"></i>
+                        <span>MS Office</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Multimedia & Design -->
+            <div class="skill-category">
+                <h3><i class='bx bx-cog'></i>Multimedia & Design</h3>
+                <div class="skill-icons">
+                    <div class="skill-icon" data-tooltip="Canva">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>Canva</span>
+                    </div>
+                    <div class="skill-icon" data-tooltip="CapCut">
+                        <i class="fa-solid fa-video"></i>
+                        <span>CapCut</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -70,26 +253,30 @@
 
         <div class="services-container">
             <div class="services-box">
-                <i class='bx bx-code-alt'></i>
+                <div class="service-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
                 <h3>Web Development</h3>
-                <p>Web development is the creation and maintenance of websites and web applications using coding
-                    languages, design, and functionality for online presence.</p>
-                <a href="https://github.com/PixelHues098" class="btn">Contact Me</a>
+                <p>Creating responsive, modern websites and web applications using the latest technologies and best practices for optimal user experience.</p>
+                <a href="#contacts" class="btn service-btn">Contact Me</a>
             </div>
 
             <div class="services-box">
-                <i class='bx  bx-ruler'></i> 
+                <div class="service-icon">
+                    <i class='bx bx-ruler'></i> 
+                </div>
                 <h3>IT/CS Instructor</h3>
-                <p>IT and Computer Science education develops skills in coding, system design, and technology, preparing students to solve real-world digital problems.</p>
-                <a href="https://www.linkedin.com/in/nicko-albes-89b2b0264/" class="btn">Contact Me</a>
+                <p>Teaching programming, system design, and modern technology concepts to help students develop practical, real-world problem-solving skills.</p>
+                <a href="#contacts" class="btn service-btn">Contact Me</a>
             </div>
 
             <div class="services-box">
-                <i class='bx bx-support'></i>
+                <div class="service-icon">
+                    <i class='bx bx-support'></i>
+                </div>
                 <h3>Tech Support</h3>
-                <p>Tech support provides assistance and troubleshooting for technical issues, helping users resolve
-                    problems with hardware, software, and digital devices.</p>
-                <a href="https://www.linkedin.com/in/nicko-albes-89b2b0264/" class="btn">Contact Me</a>
+                <p>Providing expert technical assistance and troubleshooting for software, hardware, and digital systems with efficient problem resolution.</p>
+                <a href="#contacts" class="btn service-btn">Contact Me</a>
             </div>
         </div>
     </section>
@@ -99,80 +286,150 @@
         <h2 class="heading">Projects <span>and</span> Certificates</h2>
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="assets/project1.png" alt="">
+                <img src="assets/project1.png" alt="E-Sense Project">
                 <div class="portfolio-layer">
                     <h4>E-Sense</h4>
                     <p>Open-Source Scrum Tool using Blazor WebAssembly and Enhanced Merge Sort Algorithm.</p>
-                    <a href="https://github.com/PixelHues098/esense-scrum"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/PixelHues098/esense-scrum" aria-label="View E-Sense Project"><i class='bx bx-link-external'></i></a>
+                </div>
+                <div class="portfolio-tags">
+                    <span>Blazor</span>
+                    <span>C#</span>
+                    <span>WebAssembly</span>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/project2.png" alt="">
+                <img src="assets/project2.png" alt="Surf2Sawa Project">
                 <div class="portfolio-layer">
                     <h4>Surf2Sawa</h4>
                     <p>A Website for all Surf2Sawa subscribers and agents</p>
-                    <a href="https://surf2sawa.com/?source=surf2sawa"><i class='bx bx-link-external'></i></a>
+                    <a href="https://surf2sawa.com/?source=surf2sawa" aria-label="View Surf2Sawa Project"><i class='bx bx-link-external'></i></a>
+                </div>
+                <div class="portfolio-tags">
+                    <span>Web Development</span>
+                    <span>Responsive</span>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/proj3.jpg" alt="">
+                <img src="assets/proj3.jpg" alt="CovHDec Project">
                 <div class="portfolio-layer">
                     <h4>CovHDec</h4>
                     <p>CovHDec is a Covid-19 Patient Management System using HTML, CSS, and PHP</p>
-                    <a href="https://github.com/PixelHues098/CovHDec"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/PixelHues098/CovHDec" aria-label="View CovHDec Project"><i class='bx bx-link-external'></i></a>
+                </div>
+                <div class="portfolio-tags">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Healthcare</span>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/cert1.jpg" alt="">
+                <img src="assets/cert1.jpg" alt="LCCTV MPC Certificate">
                 <div class="portfolio-layer">
                     <h4>LCCTV MPC Certificate of OJT Completion</h4>
                 </div>
+                <div class="portfolio-tags">
+                    <span>Certificate</span>
+                    <span>OJT</span>
+                </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/cert2.jpg" alt="">
+                <img src="assets/cert2.jpg" alt="DICT Motion Graphics Certificate">
                 <div class="portfolio-layer">
                     <h4>DICT Basic Motion Graphics using Adobe After Effects</h4>
                 </div>
+                <div class="portfolio-tags">
+                    <span>Certificate</span>
+                    <span>Motion Graphics</span>
+                </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/cert3.jpg" alt="">
+                <img src="assets/cert3.jpg" alt="DICT Web Development Certificate">
                 <div class="portfolio-layer">
                     <h4>DICT Web Development for Web Developers</h4>
                 </div>
+                <div class="portfolio-tags">
+                    <span>Certificate</span>
+                    <span>Web Development</span>
+                </div>
             </div>
+
+            
         </div>
     </section>
 
     <!-- contacts section design -->
     <section class="contacts" id="contacts">
         <h2 class="heading">Contact <span>Me</span></h2>
+        <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" id="name" placeholder="Full Name">
-                <input type="email" id="email" placeholder="Email Address">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>nickoalbes@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+63 975 435 0127</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Philippines</p>
+                    </div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="text" id="subject" placeholder="Email Subject">
-            </div>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" id="btn" class="btn">
-        </form>
+
+            <form action="#" id="contact-form">
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="subject" placeholder="Email Subject" required>
+                </div>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn submit-btn">
+                    <span2>Send Message</span2>
+                    <i class='bx bx-send'></i>
+                </button>
+                <div class="form-message" id="form-message"></div>
+            </form>
+        </div>
     </section>
 
     <!-- footer design -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2023 by Nicko A. | All Rights Reserved.</p>
-        </div>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Copyright &copy; <span id="current-year">2023</span> by Nicko A. | All Rights Reserved.</p>
+            </div>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-chevrons-up'></i></a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacts">Contact</a>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home" aria-label="Back to top"><i class='bx bx-chevrons-up'></i></a>
+            </div>
         </div>
     </footer>
 
