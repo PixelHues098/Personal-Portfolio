@@ -58,7 +58,7 @@ ScrollReveal().reveal('.skill-category, .info-item', {
 
 /*========== typed animation ==========*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Developer', 'IT/CS Instructor', 'Visual Artist', 'Tech Enthusiast'],
+    strings: ['Web Developer', 'IT/CS Instructor', 'Virtual Assistant', 'Tech Enthusiast'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
