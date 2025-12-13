@@ -364,52 +364,57 @@
     </section>
 
     <!-- contacts section design -->
-    <section class="contacts" id="contacts">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
+<section class="contacts" id="contacts">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class='bx bx-envelope'></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p>nickoalbes@gmail.com</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class='bx bx-phone'></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+63 975 435 0127</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class='bx bx-map'></i>
-                    <div>
-                        <h3>Location</h3>
-                        <p>Philippines</p>
-                    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class='bx bx-envelope'></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>nickoalbes@gmail.com</p>
                 </div>
             </div>
-
-            <form action="#" id="contact-form">
-                <div class="input-box">
-                    <input type="text" id="name" placeholder="Full Name" required>
-                    <input type="email" id="email" placeholder="Email Address" required>
+            <div class="info-item">
+                <i class='bx bx-phone'></i>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+63 975 435 0127</p>
                 </div>
-                <div class="input-box">
-                    <input type="text" id="subject" placeholder="Email Subject" required>
+            </div>
+            <div class="info-item">
+                <i class='bx bx-map'></i>
+                <div>
+                    <h3>Location</h3>
+                    <p>Philippines</p>
                 </div>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn submit-btn">
-                    <span2>Send Message</span2>
-                    <i class='bx bx-send'></i>
-                </button>
-                <div class="form-message" id="form-message"></div>
-            </form>
+            </div>
         </div>
-    </section>
+
+        <!-- UPDATED FORM WITH FORMSPREE -->
+        <form action="https://formspree.io/f/mzznynzy" method="POST" id="contact-form">
+            <div class="input-box">
+                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="_subject" id="subject" placeholder="Email Subject" required>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn submit-btn">
+                <span2>Send Message</span2>
+                <i class='bx bx-send'></i>
+            </button>
+            
+            <!-- Formspree will redirect here after submission -->
+            <!-- <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you.html"> -->
+            <!-- Or show a success message without redirect (recommended) -->
+            <input type="hidden" name="_next" value="#contacts">
+        </form>
+    </div>
+</section>
 
     <!-- footer design -->
     <footer class="footer">

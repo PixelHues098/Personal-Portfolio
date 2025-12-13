@@ -90,71 +90,44 @@ const formMessage = document.getElementById('form-message');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Optional: Show "Sending..." message
+        const submitBtn = this.querySelector('.submit-btn span');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
         
-        // Get form values
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
+        // The form will now submit to Formspree automatically
+        // Formspree will handle everything
         
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            showFormMessage('Please fill in all fields.', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(email)) {
-            showFormMessage('Please enter a valid email address.', 'error');
-            return;
-        }
-        
-        // Prepare email body
-        const body = `
-            <strong>Name:</strong> ${name}<br/>
-            <strong>Email:</strong> ${email}<br/>
-            <strong>Subject:</strong> ${subject}<br/>
-            <strong>Message:</strong> ${message}
-        `;
-        
-        // Send email using SMTP.js
-        Email.send({
-            SecureToken: "18f8c89d-dbbc-458d-8f41-289bddc24928",
-            To: 'nickoalbes@gmail.com',
-            From: "mobiemocken0978@gmail.com",
-            Subject: `Portfolio Contact: ${subject}`,
-            Body: body,
-            IsHtml: true
-        }).then(response => {
-            if (response === 'OK') {
-                showFormMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
-                contactForm.reset();
-            } else {
-                showFormMessage('Failed to send message. Please try again.', 'error');
-            }
-        }).catch(error => {
-            console.error('Email send error:', error);
-            showFormMessage('Failed to send message. Please try again.', 'error');
-        });
+        // Reset button text after 3 seconds (in case of error)
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+        }, 3000);
     });
+    
+    // Check if there's a success parameter in URL
+    if (window.location.search.includes('success=true')) {
+        showFormMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
+    }
 }
 
 function showFormMessage(message, type) {
-    if (!formMessage) return;
+    // Create message element if it doesn't exist
+    let msgElement = document.getElementById('form-message');
+    if (!msgElement) {
+        msgElement = document.createElement('div');
+        msgElement.id = 'form-message';
+        msgElement.className = 'form-message';
+        contactForm.appendChild(msgElement);
+    }
     
-    formMessage.textContent = message;
-    formMessage.className = 'form-message ' + type;
-    formMessage.style.display = 'block';
+    msgElement.textContent = message;
+    msgElement.className = 'form-message ' + type;
+    msgElement.style.display = 'block';
     
     // Hide message after 5 seconds
     setTimeout(() => {
-        formMessage.style.display = 'none';
+        msgElement.style.display = 'none';
     }, 5000);
-}
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
 }
 
 /*========== smooth scrolling for anchor links ==========*/
